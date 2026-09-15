@@ -8,11 +8,12 @@
 
 ### Checklist
 
-* [ ] `exercise_1.js` … `exercise_5.js` are all present in my folder
+* [ ] `exercise_1.js` … `exercise_6.js` are all present in my folder
 * [ ] Every file runs with `node` without errors and prints the expected output
-* [ ] I used **no** `for`, `while` or `for...of` loops anywhere — only array methods
+* [ ] In exercises 1–5 I used **no** `for`, `while`, `for...of` or `.push()` — only array methods
+* [ ] In exercise 6 I built all seven functions myself, and Part C prints `matches: true`
 * [ ] Every callback I wrote is an arrow function
-* [ ] My answers are in comments: exercise 2 (`filter` vs `find`) and exercise 4 (`some` vs `filter`)
+* [ ] My answers are in comments: exercise 2 (`filter` vs `find`), exercise 4 (`some` vs `filter`) and exercise 6 (both questions)
 * [ ] I did not change any files outside my own folder
 
 ### Questions / notes for the reviewer

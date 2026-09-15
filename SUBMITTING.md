@@ -51,7 +51,7 @@ You can check which branch you are on at any time with `git branch` — the curr
 
 ## 4. Create your folder and your files
 
-Inside the `submissions/` folder, create a folder named after your GitHub username and put your five exercise files inside it:
+Inside the `submissions/` folder, create a folder named after your GitHub username and put your six exercise files inside it:
 
 ```bash
 mkdir submissions/<your-username>
@@ -73,7 +73,8 @@ javascript-205-homework-8/
         ├── exercise_2.js
         ├── exercise_3.js
         ├── exercise_4.js
-        └── exercise_5.js
+        ├── exercise_5.js
+        └── exercise_6.js
 ```
 
 Only your own folder changes. Do not edit `README.md`, `EXERCISES.md`, `SUBMITTING.md` or any other student's folder.
@@ -85,7 +86,7 @@ From inside your folder, run every file and compare what you see with the **expe
 ```bash
 node exercise_1.js
 node exercise_2.js
-# ...and so on, up to exercise_5.js
+# ...and so on, up to exercise_6.js
 ```
 
 A file that stops with an error is not finished yet.
@@ -107,7 +108,7 @@ You should see something like:
 
 ```text
 [<your-username> 3f2a9c1] Add homework 8
- 5 files changed, 78 insertions(+)
+ 6 files changed, 130 insertions(+)
 ...
 remote: Create a pull request for '<your-username>' on GitHub by visiting:
 remote:      https://github.com/<your-username>/javascript-205-homework-8/pull/new/<your-username>
@@ -151,11 +152,12 @@ Your Pull Request updates itself — you do **not** need to open a new one. **Do
 
 ## Checklist before you submit
 
-* [ ] `exercise_1.js` … `exercise_5.js` are inside `submissions/<your-username>/`
+* [ ] `exercise_1.js` … `exercise_6.js` are inside `submissions/<your-username>/`
 * [ ] Every file runs with `node` without errors and prints the expected output
-* [ ] I used **no** `for`, `while` or `for...of` loops anywhere — only array methods
-* [ ] Every callback I wrote is an arrow function, and I did not use `.push()`, `var` or `prompt()`
-* [ ] My answers are in comments: exercise 2 (`filter` vs `find`) and exercise 4 (`some` vs `filter`)
+* [ ] In exercises 1–5 I used **no** `for`, `while`, `for...of` or `.push()` — only array methods
+* [ ] In exercise 6 I built all seven functions myself, and Part C prints `matches: true`
+* [ ] Every callback I wrote is an arrow function, and I did not use `var` or `prompt()`
+* [ ] My answers are in comments: exercise 2 (`filter` vs `find`), exercise 4 (`some` vs `filter`) and exercise 6 (both questions)
 * [ ] No files outside your own folder were changed
 * [ ] Your branch is named after your GitHub username
 * [ ] The Pull Request is open with the title "Homework 8 - Your Name"

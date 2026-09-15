@@ -196,6 +196,107 @@ summary: 3 good movies · 386 min
 
 ---
 
+## `exercise_6.js` — Write the methods yourself
+
+Everything you used so far was built for you. In this exercise you build all seven yourself — and you will see there is no magic in any of them.
+
+**In this exercise only, `for...of` and `.push()` are allowed.** They have to be: a method that walks an array *is* a loop. That is the whole point — `map` is a loop somebody already wrote, so that you only have to supply the part that changes.
+
+### Part A — build them
+
+Each of your functions takes the **array as its first parameter** and the **callback as its second**. That is the only real difference from the built-in methods, which get their array from the `.` in front of them.
+
+The first one is done for you — copy it and write the other six in the same shape:
+
+```javascript
+function myForEach(list, action) {
+    for (const item of list) {
+        action(item);
+    }
+}
+```
+
+Now write:
+
+1. `myMap(list, transform)` — returns a **new array** with `transform(item)` in place of every element
+2. `myFilter(list, keep)` — returns a **new array** with only the elements where `keep(item)` is true
+3. `myFind(list, test)` — returns the **first** element where `test(item)` is true
+4. `mySome(list, test)` — returns `true` if **at least one** element passes `test`, otherwise `false`
+5. `myEvery(list, test)` — returns `true` if **every** element passes `test`, otherwise `false`
+6. `myReduce(list, combine, start)` — starts from `start` and, for every element, replaces the result so far with `combine(resultSoFar, item)`
+
+> Hint for `myFind`, `mySome` and `myEvery`: `return` does not only hand back a value, it also **stops the function immediately**. Once `myFind` has found its element there is nothing left to look for — so `return` it from inside the loop, and the rest of the array is never even visited.
+
+### Part B — use them
+
+Copy these two arrays into your file and then write the lines below exactly as they are:
+
+```javascript
+const numbers = [3, 7, 2, 9, 4];
+const words = ["sun", "banana", "kiwi", "fig"];
+
+myForEach(words, (word) => console.log("word:", word));
+console.log("myMap:", myMap(numbers, (n) => n * n));
+console.log("myFilter:", myFilter(numbers, (n) => n > 4));
+console.log("myFind:", myFind(words, (w) => w.length > 4));
+console.log("myFind:", myFind(words, (w) => w.length > 10));
+console.log("mySome:", mySome(numbers, (n) => n > 8));
+console.log("myEvery:", myEvery(numbers, (n) => n > 1));
+console.log("myEvery:", myEvery(numbers, (n) => n > 3));
+console.log("myReduce:", myReduce(numbers, (sum, n) => sum + n, 0));
+```
+
+Expected output so far:
+
+```text
+word: sun
+word: banana
+word: kiwi
+word: fig
+myMap: [ 9, 49, 4, 81, 16 ]
+myFilter: [ 7, 9 ]
+myFind: banana
+myFind: undefined
+mySome: true
+myEvery: true
+myEvery: false
+myReduce: 25
+```
+
+If a line is wrong, the bug is in your function, not in the line — the lines above are the same ones you would write for the real methods.
+
+### Part C — the proof
+
+Copy the `movies` array from exercise 5 into your file, and redo that exercise using **only your own functions**:
+
+```javascript
+const good = myFilter(movies, (m) => m.rating >= 8);
+console.log("goodTitles:", myMap(good, (m) => m.title));
+console.log("goodMinutes:", myReduce(good, (sum, m) => sum + m.minutes, 0));
+console.log("matches:", myMap(good, (m) => m.title).join() === good.map((m) => m.title).join());
+```
+
+Expected output:
+
+```text
+goodTitles: [ 'Inception', 'Parasite', 'Whiplash' ]
+goodMinutes: 386
+matches: true
+```
+
+The last line compares your `myMap` against the real `.map()` on the same data. `true` means you built the same thing.
+
+Then answer these two questions in comments at the bottom of the file:
+
+1. **`myFind` returns `undefined` when nothing matches — but you never wrote the word `undefined`. Where does it come from?**
+2. **What can the real `.map()` do that your `myMap` cannot?** Look at how the two are written at the call site.
+
+> Hint for the comparison: `.join()` turns an array into a string, so `[1, 2].join()` is `"1,2"`. Two arrays are never `===` to each other even when they hold the same things, but their joined strings are.
+>
+> Hint for question 2: try to write `numbers.myMap(...)` and see what happens. Then look at Part C again — which of the two can you chain onto the end of another call?
+
+---
+
 ## Rules
 
 You may use:
@@ -209,15 +310,17 @@ You may use:
 
 Not allowed **in this homework**:
 
-* `for`, `while` and `for...of` — every exercise can be solved with the methods above, and that is the point of this homework
-* `.push()` — none of these methods needs it. If you are pushing into an empty array, you are writing a loop with extra steps
+* `for`, `while` and `for...of` — **in exercises 1–5**. Every one of them can be solved with the methods above, and that is the point of this homework
+* `.push()` — **in exercises 1–5**. None of those methods needs it. If you are pushing into an empty array, you are writing a loop with extra steps
 * `var` — use `const` or `let`
 * `prompt()` — it does not exist in Node.js, so the file would crash
 
 Write every callback as an **arrow function**.
 
-> You already know how to write these loops by hand — that is exactly why you can now write them shorter. Each of these methods is a `for` loop that someone else already wrote for you; the only thing you still have to provide is the part that differs every time, which is the callback.
+**Exercise 6 is the exception:** there you are building the methods, so `for...of` and `.push()` are exactly what you need.
+
+> You already know how to write these loops by hand — that is exactly why you can now write them shorter. Each of these methods is a `for` loop that someone else already wrote for you; the only thing you still have to provide is the part that differs every time, which is the callback. In exercise 6 you write that loop yourself, and the mystery disappears for good.
 
 ---
 
-When your five files are ready, go to **[How to submit](./SUBMITTING.md)**.
+When your six files are ready, go to **[How to submit](./SUBMITTING.md)**.

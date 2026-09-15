@@ -13,7 +13,7 @@ In Homework 7 a function was a value you could store in a variable, an object or
 * **`reduce`** — the whole array folded into one value
 * **`some` / `every` / `forEach`**
 
-There are **five exercises**, and in all of them you replace loops with these methods. Everything else is what you already know: variables, arrays, objects, template literals and arrow functions.
+There are **six exercises**. In the first five you replace loops with these methods; in the sixth you build all seven methods yourself, from scratch, and see that none of them is magic. Everything else is what you already know: variables, arrays, objects, template literals and arrow functions.
 
 **Deadline:** before Workshop 10.
 
@@ -23,7 +23,7 @@ There are **five exercises**, and in all of them you replace loops with these me
 
 | | |
 |---|---|
-| **[📚 Exercises](./EXERCISES.md)** | The five exercises, their expected output, and the rules |
+| **[📚 Exercises](./EXERCISES.md)** | The six exercises, their expected output, and the rules |
 | **[📤 How to submit](./SUBMITTING.md)** | Fork, branch, Pull Request — step by step, plus the checklist |
 
 Read the short section below first, then go to the exercises.

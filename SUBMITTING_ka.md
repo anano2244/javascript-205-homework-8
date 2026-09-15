@@ -51,7 +51,7 @@ Switched to a new branch '<your-username>'
 
 ## 4. შექმენით თქვენი ფოლდერი და ფაილები
 
-`submissions/` ფოლდერის შიგნით შექმენით ფოლდერი თქვენი GitHub-ის მომხმარებლის სახელით და ჩადეთ იქ თქვენი ხუთი სავარჯიშოს ფაილი:
+`submissions/` ფოლდერის შიგნით შექმენით ფოლდერი თქვენი GitHub-ის მომხმარებლის სახელით და ჩადეთ იქ თქვენი ექვსი სავარჯიშოს ფაილი:
 
 ```bash
 mkdir submissions/<your-username>
@@ -73,7 +73,8 @@ javascript-205-homework-8/
         ├── exercise_2.js
         ├── exercise_3.js
         ├── exercise_4.js
-        └── exercise_5.js
+        ├── exercise_5.js
+        └── exercise_6.js
 ```
 
 იცვლება მხოლოდ თქვენი საკუთარი ფოლდერი. ნუ შეასწორებთ `README.md`-ს, `EXERCISES.md`-ს, `SUBMITTING.md`-ს ან სხვა სტუდენტის ფოლდერს.
@@ -85,7 +86,7 @@ javascript-205-homework-8/
 ```bash
 node exercise_1.js
 node exercise_2.js
-# ...და ასე შემდეგ, exercise_5.js-მდე
+# ...და ასე შემდეგ, exercise_6.js-მდე
 ```
 
 ფაილი, რომელიც შეცდომით ჩერდება, ჯერ დასრულებული არაა.
@@ -107,7 +108,7 @@ git push -u origin <your-username>
 
 ```text
 [<your-username> 3f2a9c1] Add homework 8
- 5 files changed, 78 insertions(+)
+ 6 files changed, 130 insertions(+)
 ...
 remote: Create a pull request for '<your-username>' on GitHub by visiting:
 remote:      https://github.com/<your-username>/javascript-205-homework-8/pull/new/<your-username>
@@ -151,11 +152,12 @@ git push
 
 ## ჩეკლისტი ჩაბარებამდე
 
-* [ ] `exercise_1.js` … `exercise_5.js` არის `submissions/<your-username>/`-ის შიგნით
+* [ ] `exercise_1.js` … `exercise_6.js` არის `submissions/<your-username>/`-ის შიგნით
 * [ ] ყოველი ფაილი `node`-ით შეცდომების გარეშე გაეშვება და ბეჭდავს მოსალოდნელ შედეგს
-* [ ] არსად გამომიყენებია `for`, `while` ან `for...of` ციკლი — მხოლოდ მასივის მეთოდები
-* [ ] ყოველი callback, რომელიც დავწერე, ისრიანი ფუნქციაა; არ გამომიყენებია `.push()`, `var` და `prompt()`
-* [ ] პასუხები კომენტარებშია: სავარჯიშო 2 (`filter` vs `find`) და სავარჯიშო 4 (`some` vs `filter`)
+* [ ] 1–5 სავარჯიშოებში არსად გამომიყენებია `for`, `while`, `for...of` ან `.push()` — მხოლოდ მასივის მეთოდები
+* [ ] მე-6 სავარჯიშოში შვიდივე ფუნქცია თავად ავაგე და C ნაწილი ბეჭდავს `matches: true`-ს
+* [ ] ყოველი callback, რომელიც დავწერე, ისრიანი ფუნქციაა; არ გამომიყენებია `var` და `prompt()`
+* [ ] პასუხები კომენტარებშია: სავარჯიშო 2 (`filter` vs `find`), სავარჯიშო 4 (`some` vs `filter`) და სავარჯიშო 6 (ორივე კითხვა)
 * [ ] თქვენი ფოლდერის გარეთ არცერთი ფაილი არ შეცვლილა
 * [ ] თქვენი ბრენჩი თქვენი GitHub-ის მომხმარებლის სახელით არის დასახელებული
 * [ ] Pull Request გახსნილია სათაურით "Homework 8 - Your Name"
