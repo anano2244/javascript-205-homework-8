@@ -1,30 +1,8 @@
-# Submissions
+JavaScript Array Methods and Custom Loops Practice
 
-Each student creates **one folder here**, named after their GitHub username (`submissions/<your-username>/`), and puts `exercise_1.js` … `exercise_6.js` inside it. Nothing else goes in this folder: no extra files, no folders with other names, and no changes to other students' folders.
+This assignment focuses on practicing built-in JavaScript array iteration methods alongside custom loop implementations to understand how they work under the hood.
 
-The tasks are in [EXERCISES.md](../EXERCISES.md) and the submission steps in [SUBMITTING.md](../SUBMITTING.md).
-
-For example, with two students whose usernames are `nino-b` and `giorgi-k`:
-
-```text
-submissions/
-├── README.md
-├── nino-b/
-│   ├── exercise_1.js
-│   ├── exercise_2.js
-│   ├── ...
-│   └── exercise_6.js
-└── giorgi-k/
-    ├── exercise_1.js
-    ├── exercise_2.js
-    ├── ...
-    └── exercise_6.js
-```
-
----
-
-## ჩაბარებული სამუშაოები
-
-თითოეული სტუდენტი ქმნის **ერთ ფოლდერს** აქ, თავისი GitHub-ის მომხმარებლის სახელით (`submissions/<your-username>/`), და ჩადებს იქ `exercise_1.js` … `exercise_6.js` ფაილებს. სხვა არაფერი ხვდება ამ ფოლდერში: არც დამატებითი ფაილები, არც სხვა სახელის ფოლდერები და არც ცვლილებები სხვა სტუდენტების ფოლდერებში.
-
-დავალებები იხილეთ [EXERCISES_ka.md](../EXERCISES_ka.md)-ში, ჩაბარების ნაბიჯები კი — [SUBMITTING_ka.md](../SUBMITTING_ka.md)-ში.
+## Overview of What i Did
+* *Built-in Array Methods:* Used core array methods to process and manipulate data, including filter, find, reduce, some, every, and forEach.
+* *Custom Loops:* Recreated the logic of built-in array methods manually by writing our own for loops from scratch to deeply understand the underlying iteration process.
+* *Functions:* Practiced working with JavaScript functions and handling data collections efficiently.
