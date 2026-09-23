@@ -54,14 +54,14 @@ const numbers = [3, 7, 2, 9, 4];
 const words = ["sun", "banana", "kiwi", "fig"];
 
 myForEach(words, (word) => console.log("word:", word));
-console.log("myMap:", myMap(numbers, (n) => n * n));
-console.log("myFilter:", myFilter(numbers, (n) => n > 4));
-console.log("myFind:", myFind(words, (w) => w.length > 4));
-console.log("myFind:", myFind(words, (w) => w.length > 10));
-console.log("mySome:", mySome(numbers, (n) => n > 8));
-console.log("myEvery:", myEvery(numbers, (n) => n > 1));
-console.log("myEvery:", myEvery(numbers, (n) => n > 3));
-console.log("myReduce:", myReduce(numbers, (sum, n) => sum + n, 0));
+console.log('myMap:', myMap(numbers, (n) => n * n));
+console.log('myFilter:', myFilter(numbers, (n) => n > 4));
+console.log('myFind:', myFind(words, (w) => w.length > 4));
+console.log('myFind:', myFind(words, (w) => w.length > 10));
+console.log('mySome:', mySome(numbers, (n) => n > 8));
+console.log('myEvery:', myEvery(numbers, (n) => n > 1));
+console.log('myEvery:', myEvery(numbers, (n) => n > 3));
+console.log('myReduce:', myReduce(numbers, (sum, n) => sum + n, 0));
 // part b
 const movies = [
     { title: "Inception", year: 2010, rating: 8.8, minutes: 148 },
@@ -72,9 +72,9 @@ const movies = [
 ];
 
 const good = myFilter(movies, (m) => m.rating >= 8);
-console.log("goodTitles:", myMap(good, (m) => m.title));
-console.log("goodMinutes:", myReduce(good, (sum, m) => sum + m.minutes, 0));
-console.log("matches:", myMap(good, (m) => m.title).join() === good.map((m) => m.title).join());
+console.log('goodTitles:', myMap(good, (m) => m.title));
+console.log('goodMinutes:', myReduce(good, (sum, m) => sum + m.minutes, 0));
+console.log('matches:', myMap(good, (m) => m.title).join() === good.map((m) => m.title).join());
 // the word undefined is not written in our code because it is javascript's default return value for a function, when no matching element is found in the array.
 //  The .map() method is a built-in function. 
 //  In our assignment, when we write 'mymap' outside without a dot,  it is simply the name of the function, and what is inside the parentheses are parameters.

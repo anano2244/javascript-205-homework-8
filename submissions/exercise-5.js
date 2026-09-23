@@ -6,12 +6,11 @@ const movies = [
     { title: "Whiplash",  year: 2014, rating: 8.5, minutes: 106 },
 ];
 const good = movies.filter(film => film.rating >= 8);
-console.log(good);
 const goodTitles = good.map(film => film.title);
-console.log(goodTitles);
+console.log('goodTitles:',goodTitles);
 const goodMinutes = good.reduce((acc , film) => acc + film.minutes, 0); 
-console.log(goodMinutes);
+console.log('goodMinutes:',goodMinutes);
 const best = movies.reduce((acc, film) => film.rating > acc.rating ? film : acc).title;
-console.log(best);
-const summary= (`${good.length} good movies - ${goodMinutes}`);
-console.log(summary);
+console.log('best:',best);
+const summary= list => `${list.length} good movies. ${goodMinutes} min`;
+console.log('summary:',summary(good));

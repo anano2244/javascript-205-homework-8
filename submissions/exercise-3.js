@@ -7,13 +7,13 @@ const cart = [
 ];
 
 const sum = numbers.reduce((acc,num ) => acc + num, 0 );
-console.log(sum);
+console.log('sum:',sum);
 
 const total = cart.reduce((acc,item) => acc +(item.price * item.quantity), 0);
-console.log(total);
+console.log('total:',total);
 
 const itemCount = cart.reduce((acc, item) => acc + item.quantity, 0);
-console.log(itemCount);
+console.log('itemCount:',itemCount);
 
 const biggest = numbers.reduce((acc, num) => Math.max(acc, num));
-console.log(biggest);
+console.log('biggest:',biggest);
